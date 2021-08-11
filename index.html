@@ -5,31 +5,40 @@
         <link rel = "stylesheet" href = "library.css">
     </head>
     <body>
-        <div id = "forum-box">
-            <form id = "form">
-                <div id = "name-box">
-                    <label for = "book">Name of the Book</label>
-                    <input  name = "book" id ="book" type = "text" required>
-                </div>
-                <div id ="author-box">
-                    <label for = "author" >Author of the book</label>
-                    <input name = "author" id = "author" type = "text" required>
-                </div>
-                <div id = "pages-box">
-                    <label for = "pages">No. of Pages</label>
-                    <input name = "pages" id = "pages" type = "number" required>
-                </div>
-                <div id = "status-box">
-                    <label for = "status">Read Status</label>
-                <select name = "status" id="status" name = "status">
-                    <option value="read">Read</option>
-                    <option value="not-read">Not Read</option>
-                  </select>
-                </div>
-                <input id = submit type = "submit" value = "Add Book">
-            </form>
+        <div id = "container">
+            <div id = "title">
+                <h1>StrumNehViir's Library</h1>
+            </div>
+            <div id = "form-box">
+                <form id = "form">
+                    <div id = "name-box" class = "formbox">
+                        <label for = "book">Title</label>
+                        <input  name = "book" id ="book" type = "text" class = "form-input" required>
+                    </div>
+                    <div id ="author-box" class = "formbox">
+                        <label for = "author" >Author</label>
+                        <input name = "author" id = "author" type = "text" class = "form-input" required>
+                    </div>
+                    <div id = "pages-box" class = "formbox">
+                        <label for = "pages">Pages</label>
+                        <input name = "pages" id = "pages" type = "number" class = "form-input" required>
+                    </div>
+                    <div id = "status-box" class = "formbox">
+                        <label for = "status">Status</label>
+                    <select name = "status" id="status" name = "status" class = "form-input" required>
+                        <option value="read">read</option>
+                        <option value="not-read">not read</option>
+                      </select>
+                    </div>
+                    <input id = submit type = "submit" value = "Add Book">
+                </form>
+            </div>
+            <div id = "library-box"></div>
+            <div id = "footer">
+                <p> Designed By: </p>
+                <p>StrumNehViir</p>
+            </div>
+            <script src = "library.js"></script>
         </div>
-        <div id = "library-box"></div>
-        <script src = "library.js"></script>
     </body>
 </html>

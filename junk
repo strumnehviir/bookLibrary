@@ -1,0 +1,76 @@
+let allData = new FormData(e.target)
+    let bookName = allData.get('book')
+    let bookAuthor = allData.get('author')
+    let bookPages = allData.get('pages')
+    let bookStatus = allData.get('status')
+
+
+
+
+    libraryGenerator(bookName, bookAuthor, bookPages, bookStatus)
+
+
+
+    function libraryGenerator(name, author, pages, read){
+    newBook = new Book(name, author, pages, read)
+    library.push(newBook)
+    creatorDom(library)
+
+
+
+    library.forEach(x =>{
+            console.log(x.title)
+        })
+}
+
+
+
+
+
+
+   for( bookObject in inputArr){
+        console.table(inputArr)
+        console.log(bookObject.title)
+        console.log(bookObject.author)
+        console.log(bookObject.pages)
+        let bookbox = document.createElement('div')
+        let booktitle = document.createElement('p')
+        let bookwriter = document.createElement('p')
+        let bookpages = document.createElement('p')
+        booktitle.innerText = bookObject.title
+        bookwriter.innerText = bookObject.author
+        bookpages.innerText = bookObject.pages
+        bookbox.appendChild(booktitle)
+        bookbox.appendChild(bookwriter)
+        bookbox.appendChild(bookpages)
+        libraryBox.appendChild(bookbox) 
+    }
+
+
+
+
+
+
+
+
+    readButton.addEventListener('click', ()=> {
+            if(readButton === "Read"){
+                readButton.innerText = "Not Read"
+                let foundObject = library.find(element => this.author === booktitle.innerText)
+                foundObject.read ="Not Read"
+                let index = library.findIndex(object =>{
+                    object.author === booktitle.innerText
+                })
+                library.splice(index, 1, foundObject)
+
+
+            }
+            else if(readButton === "Not Read"){
+                readButton.innerText = "Read"
+            }
+        })
+
+
+
+
+        
